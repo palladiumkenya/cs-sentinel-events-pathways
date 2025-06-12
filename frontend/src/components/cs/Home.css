@@ -1,0 +1,77 @@
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .banner {
+    background-image: url("https://nthusi.sirv.com/Surveillance%20Banner.png");
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.8rem;
+  }
+
+  .nav-links a {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+  }
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 0;
+  }
+  .tooltip-container .tooltip-text {
+    font-size: 0.7rem;
+    visibility: hidden;
+    width: 23rem;
+    /*width: 250px;*/
+    background-color: white;
+    color: #000;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the anchor */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
