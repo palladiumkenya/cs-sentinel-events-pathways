@@ -7,6 +7,7 @@ import Card from "@mui/material/Card";
 import InfoBar from './cs/InfoBar';
 
 export default function MainGrid() {
+  const showHeiSankey = process.env.REACT_APP_FEATURE_HEI_SANEKY === 'true';
   return (
     <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px', zoom: "90%" } }}>
         <Home />
@@ -22,11 +23,13 @@ export default function MainGrid() {
             <HighchartSankey dataset="c&t" />
           </Card>
         </Grid>
-        {/* <Grid size={{ lg: 12 }}>
+        {showHeiSankey && (
+        <Grid size={{ lg: 12 }}>
           <Card sx={{ border: "none", boxShadow: "none" }}>
             <HighchartSankey dataset="hei" />
           </Card>
-        </Grid> */}
+        </Grid>
+        )}
       </Grid>
     </Box>
   );
