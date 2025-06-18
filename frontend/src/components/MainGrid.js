@@ -7,8 +7,8 @@ import Card from "@mui/material/Card";
 import InfoBar from './cs/InfoBar';
 
 export default function MainGrid() {
-  console.log('showHeiSankeyEnv:', process.env.REACT_APP_FEATURE_HEI_SANEKY);
-  const showHeiSankey = process.env.REACT_APP_FEATURE_HEI_SANEKY == 'true';
+  console.log('showHeiSankeyEnv:', process.env.REACT_APP_FEATURE_HEI_SANKEY);
+  const showHeiSankey = process.env.REACT_APP_FEATURE_HEI_SANKEY === 'true';
   console.log("showHeiSankey:", showHeiSankey);
   return (
     <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px', zoom: "90%" } }}>
