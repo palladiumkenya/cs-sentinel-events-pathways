@@ -7,6 +7,7 @@ import Card from "@mui/material/Card";
 import InfoBar from './cs/InfoBar';
 
 export default function MainGrid() {
+  console.log('showHeiSankeyEnv:', process.env.REACT_APP_FEATURE_HEI_SANEKY);
   const showHeiSankey = process.env.REACT_APP_FEATURE_HEI_SANEKY == 'true';
   console.log("showHeiSankey:", showHeiSankey);
   return (
